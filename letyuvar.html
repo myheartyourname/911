@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>let var区别</title>
+	<script>
+    	var arr=[];
+    	for (let i=0;i<10;i++){  //let不会释放全局变量
+    		arr[i]=function(){
+    			alert(i);
+    		}
+    	}
+    	arr[2]();  //2
+    	arr[5]();  //5
+    </script>
+    <script>
+    	var arr=[];
+    	for (var i=0;i<10;i++){  //var释放全局变量
+    		arr[i]=function(){  
+    			alert(i);
+    		}
+    	}
+    	arr[2]();  //10
+    	arr[5]();  //10
+    </script>
+    <script>
+    	var num='a';
+		for(var i=0;i<10;i++){      //var的 局部变量覆盖全局变量  
+		  console.log(i);
+		}
+		console.log(i);
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

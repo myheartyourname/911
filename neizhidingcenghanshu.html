@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内置顶层函数</title>
+	<script>
+    /*汉字的编码*/
+    	let str="张三";
+    	console.log(escape(str));
+    /*解码为汉字*/
+    	console.log(unescape("%u5F20%u4E09"));
+    </script>
+    <script>
+    /*转换成数字*/
+        console.log(Number(123));  //123 数字转
+        console.log(Number(0b1111)); //15 二进制转
+        console.log(Number(false)); //0 布尔值转
+        console.log(Number(null)); //0 空转
+        console.log(Number(0123));  //83 八进制转    0、0o都可以表示八进制
+
+        console.log(Number(123));  //123  直接数字转
+        console.log(Number("0123"));  //123   数字型的字符串才可以转
+        console.log(Number(123.00));  //123
+        console.log(Number("123.00"));  //123
+        console.log(Number("123.01"));  //123.01
+
+        console.log(Number("123.01.2"));  //NaN
+        console.log(Number("123px"));  //NaN
+        console.log(Number('abcd')); //NaN
+    	console.log(Number(undefined));   //NaN
+    </script>
+    <script>
+    /*转换成字符串*/
+    	console.log(String(true));  //true  字符串
+    </script>
+    <script>
+    /*转换成布尔值*/
+    	console.log(Boolean(''));  //false   6种0，false，null，undefined，NaN，''
+    	console.log(Boolean(0));  //false   6种0，false，null，undefined，NaN，''
+    	console.log(Boolean([]));  //true
+    </script>
+    <script>
+    /*parseInt    字符串转换成整数 
+                  数字、+、-、空格
+                  第一个数字字符开始到第一个非数字字符结束*/
+    	console.log(parseInt('1122'));  //1122
+    	console.log(parseInt('0b1111')); //0
+    	console.log(parseInt('   1001px')); //1001
+    	console.log(parseInt('   -1.001px222')); //-1
+    	console.log(parseInt('   acd-1001px')); //NaN
+    </script>
+    <script>
+    /*parseFloat  字符串转换成小数*/
+    	console.log(parseFloat('101.5px'));  //101.5
+    	console.log(parseFloat('1015px'));  //1015
+    </script>
+    <script>
+    /*不是一个数字吗？*/
+    	console.log(isNaN(true));  //false
+    	console.log(isNaN('abcd'));  //true
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数</title>
+	<script>
+    /*箭头函数*/  /*回调函数里经常使用箭头函数*/  /*箭头函数里没有arguments*/
+        
+    	var fn=(a)=>a;    // () 可加可不加
+    	alert(fn(1));
+        //等价于 var fn=function(a){
+        //    return a;
+        // }
+
+    	
+    	var fn=()=>3;   // () 必加
+    	alert(fn());
+    	//等价于 var fn=function(){
+        //    return 3;
+        // }
+
+    	
+    	var fn=(a,b)=>a+b;   // () 必加
+    	alert(fn(2,2));
+    	//等价于 var fn=function(a,b){
+        //    return a+b;
+        // }
+
+
+    	
+    	var fn=(a,b)=>{
+    		alert(a-b);
+    		alert(a+b);
+    		return [a,b];
+    	};   // () 必加
+    	alert(fn(6,1));
+    	//等价于 var fn=function(a,b){
+    	//       alert(a-b);
+    	//       alert(a+b);
+        //       return [a,b];   //弹出一个数组   返回值可有可无
+        // }
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

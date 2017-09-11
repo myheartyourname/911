@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>块级作用域</title>
+	<script>
+   /*块级作用域*/
+    	{
+    		// alert(num);
+            let num=10;
+            alert(num);
+    	}
+    </script>
+    <script>
+    /*块级作用域嵌套*/
+    	{
+    		let num=10;
+    		{
+    			let num=2;
+    			alert(num);
+    		}
+    		alert(num);
+    	}
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

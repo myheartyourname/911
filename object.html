@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+	<script>
+    	/*类   对象
+    	 抽象  具体*/
+    	// let zhangsan={};
+    	// console.log(typeof zhangsan);
+    	// 通过构造函数
+    	function Person(){
+    	}
+    	let zhangsan=new Person();
+    	let lisi=new Person();
+    	//添加属性  方法
+    	zhangsan.age=18;   //属性
+    	zhangsan.name="zhangsan";
+    	zhangsan.sex='男';
+    	zhangsan.height='178cm';
+    	zhangsan.weight='60kg';
+    	zhangsan.say=function(){   //此处的函数是个方法
+    		alert(zhangsan.sex);
+    	}
+    	lisi.skill='js';
+    	lisi.address='太原';
+    	alert(zhangsan.age);
+    	alert(zhangsan.name);
+    	alert(zhangsan.sex);
+    	alert(zhangsan.height);
+    	alert(zhangsan.weight);
+    	alert(lisi.skill);
+    	alert(lisi.address);
+    	zhangsan.say();
+    </script>
+</head>
+<body>
+	
+</body>
+</html>
